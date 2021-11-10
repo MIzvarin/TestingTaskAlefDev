@@ -11,6 +11,14 @@
 		FA54376627393BF200F589B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54376527393BF200F589B0 /* ContentView.swift */; };
 		FA54376827393BF300F589B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54376727393BF300F589B0 /* Assets.xcassets */; };
 		FA54376B27393BF300F589B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54376A27393BF300F589B0 /* Preview Assets.xcassets */; };
+		FA543776273944D900F589B0 /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA543775273944D900F589B0 /* PersonInfo.swift */; };
+		FA543778273945C700F589B0 /* PersonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA543777273945C700F589B0 /* PersonDetails.swift */; };
+		FA54377C273A887200F589B0 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54377B273A887200F589B0 /* CancelButton.swift */; };
+		FAACAD54273BAA39000CE584 /* buttonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACAD53273BAA39000CE584 /* buttonBorder.swift */; };
+		FAACAD57273BAB24000CE584 /* AddChildButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACAD56273BAB24000CE584 /* AddChildButton.swift */; };
+		FAACAD59273BB0E2000CE584 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACAD58273BB0E2000CE584 /* ViewModel.swift */; };
+		FAD393BF273A99EC00110B92 /* ChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD393BE273A99EC00110B92 /* ChildInfo.swift */; };
+		FAD393C2273A9DB900110B92 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD393C1273A9DB900110B92 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		FA54376527393BF200F589B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA54376727393BF300F589B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA54376A27393BF300F589B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA543775273944D900F589B0 /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
+		FA543777273945C700F589B0 /* PersonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetails.swift; sourceTree = "<group>"; };
+		FA54377B273A887200F589B0 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		FAACAD53273BAA39000CE584 /* buttonBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonBorder.swift; sourceTree = "<group>"; };
+		FAACAD56273BAB24000CE584 /* AddChildButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildButton.swift; sourceTree = "<group>"; };
+		FAACAD58273BB0E2000CE584 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FAD393BE273A99EC00110B92 /* ChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInfo.swift; sourceTree = "<group>"; };
+		FAD393C1273A9DB900110B92 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +67,11 @@
 		FA54376227393BF200F589B0 /* TestingTaskAlefDev */ = {
 			isa = PBXGroup;
 			children = (
-				FA54376327393BF200F589B0 /* TestingTaskAlefDevApp.swift */,
-				FA54376527393BF200F589B0 /* ContentView.swift */,
-				FA54376727393BF300F589B0 /* Assets.xcassets */,
+				FAD393C0273A9DA600110B92 /* Model */,
+				FAACAD4F273BA72D000CE584 /* ViewModel */,
+				FAD393C4273AFE8000110B92 /* Views */,
+				FAACAD52273BAA1E000CE584 /* Modifiers */,
+				FAD393C3273AFE3B00110B92 /* Sources */,
 				FA54376927393BF300F589B0 /* Preview Content */,
 			);
 			path = TestingTaskAlefDev;
@@ -65,6 +83,60 @@
 				FA54376A27393BF300F589B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAACAD4F273BA72D000CE584 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAACAD58273BB0E2000CE584 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAACAD52273BAA1E000CE584 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FAACAD53273BAA39000CE584 /* buttonBorder.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		FAACAD55273BAB0C000CE584 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FA54377B273A887200F589B0 /* CancelButton.swift */,
+				FAACAD56273BAB24000CE584 /* AddChildButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FAD393C0273A9DA600110B92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD393C1273A9DB900110B92 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD393C3273AFE3B00110B92 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FA54376727393BF300F589B0 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FAD393C4273AFE8000110B92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA54376327393BF200F589B0 /* TestingTaskAlefDevApp.swift */,
+				FA54376527393BF200F589B0 /* ContentView.swift */,
+				FA543777273945C700F589B0 /* PersonDetails.swift */,
+				FA543775273944D900F589B0 /* PersonInfo.swift */,
+				FAD393BE273A99EC00110B92 /* ChildInfo.swift */,
+				FAACAD55273BAB0C000CE584 /* Buttons */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAACAD59273BB0E2000CE584 /* ViewModel.swift in Sources */,
 				FA54376627393BF200F589B0 /* ContentView.swift in Sources */,
+				FA543776273944D900F589B0 /* PersonInfo.swift in Sources */,
+				FA543778273945C700F589B0 /* PersonDetails.swift in Sources */,
+				FAD393BF273A99EC00110B92 /* ChildInfo.swift in Sources */,
+				FAACAD54273BAA39000CE584 /* buttonBorder.swift in Sources */,
 				FA54376427393BF200F589B0 /* TestingTaskAlefDevApp.swift in Sources */,
+				FAD393C2273A9DB900110B92 /* Person.swift in Sources */,
+				FAACAD57273BAB24000CE584 /* AddChildButton.swift in Sources */,
+				FA54377C273A887200F589B0 /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
