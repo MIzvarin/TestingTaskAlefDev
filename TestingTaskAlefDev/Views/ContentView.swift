@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     //MARK: - State properies
-    @State private var children: [Person] = []
-    @State private var selfInfo = Person(name: "", age: "")
+    @StateObject private var viewModel = ViewModel()
     @State private var showAlert = false
     
     //MARK: - Private properties
@@ -23,19 +22,19 @@ struct ContentView: View {
         VStack {
             VStack(alignment: .leading) {
                 Text("Персональные данные").bold()
-                PersonInfo(person: $selfInfo)
+                PersonInfo(person: $viewModel.selfInfo)
                 
                 HStack {
                     Text("Дети (макс. 5)").bold()
                     Spacer()
-                    if children.count < 5 {
+                    if viewModel.children.count < 5 {
                         AddChildButton(width: buttonsWidth, height: buttonsHeight) {
                             addChild()
                         }
                     }
                 }
                 
-                List($children, id: \.id) { child in
+                List($viewModel.children, id: \.id) { child in
                     ChildInfo(person: child) {
                         removeChild(child: child.wrappedValue)
                     }
@@ -56,19 +55,19 @@ struct ContentView: View {
     //MARK: - Private functions
     private func addChild() {
         let child = Person(name: "", age: "")
-        children.append(child)
+        viewModel.children.append(child)
     }
     
     private func removeChild(child: Person) {
-        if let index = children.firstIndex(where: { $0.id == child.id }) {
-            children.remove(at: index)
+        if let index = viewModel.children.firstIndex(where: { $0.id == child.id }) {
+            viewModel.children.remove(at: index)
         }
     }
     
     private func clearData() {
-        children.removeAll()
-        selfInfo.age = ""
-        selfInfo.name = ""
+        viewModel.children.removeAll()
+        viewModel.selfInfo.age = ""
+        viewModel.selfInfo.name = ""
     }
 }
 

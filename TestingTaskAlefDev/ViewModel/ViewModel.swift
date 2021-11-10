@@ -10,16 +10,9 @@ import Foundation
 protocol ViewModelProtocol {
     var selfInfo: Person { get set }
     var children: [Person] { get set }
-    
-    init(selfInfo: Person, children: [Person])
 }
 
 class ViewModel: ViewModelProtocol, ObservableObject {
-    var selfInfo: Person
-    var children: [Person]
-    
-    required init(selfInfo: Person, children: [Person]) {
-        self.selfInfo = selfInfo
-        self.children = children
-    }
+    @Published var selfInfo: Person = Person(name: "", age: "")
+    @Published var children: [Person] = []
 }
