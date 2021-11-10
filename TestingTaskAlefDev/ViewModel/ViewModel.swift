@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol ViewModelProtocol {
-    var selfInfo: Person { get set }
-    var children: [Person] { get set }
-}
-
-class ViewModel: ViewModelProtocol, ObservableObject {
+class ViewModel: ObservableObject {
     @Published var selfInfo: Person = Person(name: "", age: "")
     @Published var children: [Person] = []
+    
+    func addChild() {
+        let child = Person(name: "", age: "")
+        children.append(child)
+    }
 }

@@ -29,7 +29,7 @@ struct ContentView: View {
                     Spacer()
                     if viewModel.children.count < 5 {
                         AddChildButton(width: buttonsWidth, height: buttonsHeight) {
-                            addChild()
+                            viewModel.addChild()
                         }
                     }
                 }
@@ -50,12 +50,6 @@ struct ContentView: View {
                 }
             }
         }.padding([.leading, .trailing], 15)
-    }
-    
-    //MARK: - Private functions
-    private func addChild() {
-        let child = Person(name: "", age: "")
-        viewModel.children.append(child)
     }
     
     private func removeChild(child: Person) {
